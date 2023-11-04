@@ -32,7 +32,6 @@ body {
   color: transparent;
   padding: 1rem;
   text-align: right;
-  mask-image: linear-gradient(to right, #5433FF 0%, #20BDFF 57%, #56FFC2 100%);
   font-weight: bold;
   font-size: 13px;
 }
@@ -57,7 +56,6 @@ body {
   position: absolute;
   border-radius: 50%;
   border: 6px solid 353535;
-  background-image: linear-gradient(to right, #5433FF 0%, #20BDFF 57%, #56FFC2 100%);
   top: 15px;
   left: 85px;
   display: flex;
