@@ -10,6 +10,8 @@ body {
   color: #fff;
 }
 .card {
+  -webkit-transition: .4s;
+  transition: .4s;
   background: #262626;
   border-radius: 4px;
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.5);
@@ -20,14 +22,19 @@ body {
   position: relative;
 }
 .card h2 {
+  -webkit-transition: .4s;
+  transition: .4s;
+  color: #fff;
   margin: 0;
   padding: 0 1rem;
 }
 .card .title {
+  -webkit-transition: .4s;
+  transition: .4s;
   background-image: linear-gradient(to right, #5433FF 0%, #20BDFF 57%, #56FFC2 100%);
-  background-position-x: 22%;
   background-clip: text;
   -webkit-background-clip: text;
+  background-position-x: 59%;
   background-size: 40%;
   color: transparent;
   padding: 1rem;
@@ -36,6 +43,8 @@ body {
   font-size: 13px;
 }
 .card .desc {
+  -webkit-transition: .4s;
+  transition: .4s;
   padding: 0.5rem 1rem;
   font-size: 12px;
 }
@@ -45,12 +54,9 @@ body {
   align-items: center;
   padding: 0.5rem 1rem;
 }
-.card svg {
-  width: 85px;
-  height: 85px;
-  margin: 0 auto;
-}
 .img-avatar {
+  -webkit-transition: .4s;
+  transition: .4s;
   width: 80px;
   height: 80px;
   position: absolute;
@@ -78,9 +84,6 @@ img {
   height: 18px;
   margin: 0 auto;
 }
-.img-portada {
-  width: 100%;
-}
 .portada {
   width: 100%;
   height: 100%;
@@ -103,7 +106,71 @@ button:hover{
   transform: rotate(22deg)
 }
 a {
+  -webkit-transition: .4s;
+  transition: .4s;
   color: #b0e3ff;
   text-decoration: none;
 }
 a:hover { text-decoration: 1px solid underline }
+.switch {
+  margin-left: 6px;
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #5433FF 0%, #20BDFF 57%, #56FFC2 100%);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background: #d0d0d0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider:before {
+  background: #262626;
+}
+input:focus + .slider:before {
+  box-shadow: 0 0 1px #262626;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+.light {
+  background: #d0d0d0;
+}
+.light h2 {
+  color: #000;
+}
+.light .img-avatar {
+  background: #d0d0d0;
+}
+.light .desc {
+  color: #000;
+}
+.light a {
+  color: #18497a
+}
